@@ -1,0 +1,19 @@
+.row
+  .col-xs-10.col-xs-offset-1
+    %table.table.table-striped
+      %thead
+        %th{:style => "width: 60px"} Image
+        %th{:style => "width: 60px"} Prix
+        %th{:style => "width: 200px"} Date
+        %th Message
+      %tbody
+        - @messages.each do |message|
+          %tr
+            %td
+              =image_tag message.listing.picture, height: '50', width: '50'
+            %td
+              ="#{message.listing.price} $"
+            %td
+              ="#{message.created_at}"
+            %td
+              ="#{message.message}"

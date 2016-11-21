@@ -1,0 +1,15 @@
+.container
+  .row
+    .top
+      .col-xs-2
+        %h1.title= link_to "Listings", root_path
+      .col-xs-10.pull-right
+        %a.btn.btn-success.pull-right{:href => new_listing_path}= t('create_listing')
+
+
+        = locale_select(I18n.locale)
+        - if current_user
+          %a.my-account.pull-right{:href => "/account/users"}= t('my_account')
+          %a.logout.pull-right{"data-method" => "delete", :href => "/users/sign_out"}= t('logout')
+        - else
+          %a.logout.pull-right{"data-method" => "create", :href => new_user_session_path}= t('sign_in')

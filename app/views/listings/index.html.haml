@@ -1,0 +1,36 @@
+- @listings.each do |listing|
+  %h2 #{listing.title}
+  .row
+    .col-xs-2
+      =link_to listing_path(listing) do
+        =image_tag listing.picture, height: '150', width: '150'
+    .col-xs-10
+      .label.label-primary
+      =link_to listing.category.name, listings_path(category_id: listing.category.id)
+      %br
+      %b
+        ="#{listing.price} $"
+      %p
+        #{listing.description}
+      .clearfix
+        %br/
+      %a.btn.btn-primary.pull-right{"data-do" => "showContactModal", "data-id" => "#{listing.id}","data-user" => "#{current_user.try(:id)}"}= t('contact')
+
+  %hr
+
+
+= render partial: '/modals/modal.html.haml'
+-# %table.table.table-striped
+-#   %tr
+-#     %th.text-danger= "id"
+-#     %th.text-danger= "title"
+-#     %th.text-danger= "categorie"
+  -# - @listings.each do |listing|
+  -#   %tr
+  -#     %td
+  -#       = "#{listing.id} "
+  -#     %td
+  -#       = "#{listing.title} "
+  -#     %td
+  -#       = "#{listing.category.title}"
+  -# %br

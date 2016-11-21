@@ -1,0 +1,43 @@
+
+.container
+  .row.text-primary
+    .col-xs-6.well
+      =form_for [:account, @user] do |f|
+        - if @user.errors.any?
+          #error_explanation
+            %h2
+              = pluralize(user.errors.count, "error")
+              prohibited this task from being saved:
+            %ul
+              - @user.errors.full_messages.each do |message|
+                %li= message
+        .field.form-group
+          = f.label :email
+          = f.text_field :email, class: 'form-control'
+        .field.form-group
+          = f.label :first_name
+          = f.text_field :first_name, class: 'form-control'
+        .field.form-group
+          = f.label :last_name
+          = f.text_field :last_name, class: 'form-control'
+        .form-group
+          = f.submit 'Save', :class => "btn btn-primary pull-right"
+
+    .col-xs-5.col-xs-offset-1.well
+      =form_for [:account, @user] do |f|
+        - if @user.errors.any?
+          #error_explanation
+            %h2
+              = pluralize(user.errors.count, "error")
+              prohibited this task from being saved:
+            %ul
+              - @user.errors.full_messages.each do |message|
+                %li= message
+        .field.form-group
+          = f.label :password
+          = f.text_field :password, class: 'form-control'
+        .field.form-group
+          = f.label :password_confirm
+          = f.text_field :password_confirmation, class: 'form-control'
+        .form-group
+          = f.submit 'Save', :class => "btn btn-primary pull-right"

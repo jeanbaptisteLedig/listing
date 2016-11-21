@@ -1,0 +1,78 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  main_baseline: "You're going to find"
+  search_placeholder: "What are you searching for?"
+  search: "Search"
+  create_listing: "Create my listing"
+  contact: "Contact seller"
+  required_field: "* Required field"
+  errors:
+    one: "erreur"
+    other: "erreurs"
+  your_email: "Your E-mail address"
+  your_message: "Your message"
+  send: "Send"
+  save: "Save"
+  category: "Category"
+  choose_category: "Choose a category"
+  my_account: "My account"
+  logout: "Logout"
+  sign_in: "Login"
+  message: "Message"
+  image: "Image"
+  price: "Price"
+  date: "Date"
+  comment: "Comments"
+  my_contacts: "My contacts"
+  my_messages: "My messages"
+  my_profile: "My profile"
+  account:
+    navs:
+      my_contacts: "My contacts"
+      my_messages: "My messages"
+      my_profile: "My profile"
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M"
+  activerecord:
+    attributes:
+      listing:
+        title: "Title"
+        description: "Description"
+        picture: "Choose a picture"
+        price: "Price"
+        category_id: "Catégory"
+    errors:
+      models:
+        listing:
+          attributes:
+            email:
+              blank: "Email cannot be blank"
+            title:
+              blank: "Title cannot be blank"
+            description:
+              blank: "Description cannot be blank"
+            picture:
+              blank: "You must choose a picture"
+            price:
+              blank: "Price cannot be blank"

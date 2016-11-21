@@ -1,0 +1,78 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+fr:
+  main_baseline: "Vous allez trouver"
+  search_placeholder: "Que recherchez vous ?"
+  search: "Rechercher"
+  create_listing: "Créer mon annonce"
+  contact: "Contacter le vendeur"
+  required_field: "* Champ requis"
+  errors:
+    one: "error"
+    other: "errors"
+  your_email: "Votre adresse E-mail"
+  your_message: "Votre message"
+  send: "Envoyer"
+  save: "Enregistrer"
+  category: "Catégorie"
+  choose_category: "Sélectionnez une catégorie"
+  my_account: "Mon compte"
+  logout: "Déconnexion"
+  sign_in: "Connexion"
+  message: "Message"
+  image: "Image"
+  price: "Prix"
+  date: "Date"
+  comment: "Commentaires"
+  my_contacts: "Mes contacts"
+  my_messages: "Mes messages"
+  my_profile: "Mon profil"
+  account:
+    navs:
+      my_contacts: "Mes contacts"
+      my_messages: "Mes messages"
+      my_profile: "Mon profil"
+  time:
+    formats:
+      default: "%d-%m-%Y %H:%M"
+  activerecord:
+    attributes:
+      listing:
+        title: "Titre de l'annonce"
+        description: "Description"
+        picture: "Choisissez une image"
+        price: "Prix"
+        category_id: "Catégorie"
+    errors:
+      models:
+        listing:
+          attributes:
+            email:
+              blank: "Email doit être saisi"
+            title:
+              blank: "Titre doit être saisi"
+            description:
+              blank: "Description doit être saisi"
+            picture:
+              blank: "Vous devez choisir une image"
+            price:
+              blank: "doit être saisi"

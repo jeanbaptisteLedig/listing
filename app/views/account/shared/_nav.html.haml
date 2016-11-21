@@ -1,0 +1,8 @@
+.row
+  .col-xs-8.col-xs-offset-2
+    %ul.nav.nav-tabs
+      %li{:class =>"#{'active' if params[:controller] == 'account/contacts'}"}=link_to t('my_contacts'), account_contacts_path
+      %li{:class =>"#{'active' if params[:controller] == 'account/messages'}"}=link_to t('my_messages'), account_messages_path
+      %li{:class =>"#{'active' if params[:controller] == 'account/users'}"}=link_to t('my_profile'), account_users_path
+
+%br/

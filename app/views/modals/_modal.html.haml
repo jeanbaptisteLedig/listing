@@ -1,0 +1,14 @@
+.modal.fade{"aria-labelledby" => "myModalLabel", "data-is" => "contactModal", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      = form_tag listing_contact_path, data: {is: 'contactForm'} do
+        .modal-header
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+          %h4#myModalLabel.modal-title= t('contact')
+        .modal-body
+          .form-group
+            %label= t('your_message')
+            = text_area_tag 'message', nil, class: 'form-control'
+        .modal-footer
+          = submit_tag t('send'), class: 'btn btn-primary pull-right'

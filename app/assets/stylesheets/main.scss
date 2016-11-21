@@ -1,0 +1,138 @@
+body {
+  background-color: #fff;
+  color:#FF6600;
+  &.homepage {
+    background: url(asset-path('bg_homepage.jpg')) center center fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+}
+h1, h2, h3 {
+  font-family: 'Dosis', sans-serif;
+  color: #000;
+}
+table tr td {
+  color: #000;
+}
+table tr th {
+  background-color: #2b3e50;
+  color: #fff;
+}
+form .description {
+  height: 200px;
+}
+form.busy {
+  opacity: 0.5;
+}
+p{
+  color:black;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(43, 62, 80, 0.8);
+  z-index: 100;
+}
+.content {
+  padding-top: 80px;
+}
+.top {
+  .pull-right {
+    margin-top: 5px;
+  }
+  .language {
+    width: 60px;
+    margin-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background-position: right 50% !important;
+    background-repeat: no-repeat !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 0 !important;
+    background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#fff' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+    color: black;
+  }
+  a.my-account {
+    color: #fff;
+    line-height: 40px;
+    margin-right: 20px;
+    &:before {
+      content: '» ';
+    }
+  }
+  a.logout {
+    color: #fff;
+    line-height: 40px;
+    margin-right: 20px;
+    &:before {
+      color: red;
+      content: '× ';
+    }
+  }
+  h1 {
+    font-size: 40px;
+    padding: 0;
+    margin-top: 5px;
+    &.title {
+      a {
+        color: #fff;
+        text-decoration: none !important;
+      }
+    }
+  }
+}
+.search {
+  margin-top: 220px;
+  h2 {
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 10px #000;
+  }
+  .form-horizontal {
+    margin-top: 20px;
+  }
+}
+.listing {
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 20px;
+  h3 {
+    font-size: 40px;
+  }
+  .category {
+    margin-left: 10px;
+  }
+  .price {
+    color: black;
+    font-weight: bolder;
+  }
+}
+.required:after {
+  content: '*';
+}
+.errors {
+  background-color: red;
+  padding-top: 10px;
+}
+.modal {
+  textarea {
+    height: 200px;
+  }
+}
+.nav-tabs {
+  margin-top: 90px;
+  border-bottom: 1px solid #2b3e50;
+  padding-bottom: 10px;
+  li a {
+    color: #2b3e50;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

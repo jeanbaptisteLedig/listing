@@ -1,0 +1,21 @@
+%h2= "Defail view for listing #{@listing.id}"
+%h3="#{@listing.id} - #{@listing.title}"
+=image_tag @listing.picture, height: '150', width: '150'
+%h3=t('category')
+="#{@listing.category.name}"
+%br
+%h3= 'Description'
+="#{@listing.description}"
+/=image_tag @listing.picture
+%h1=t('comment')
+.col-xs-12
+  = form_tag account_comments_path do
+    %textarea{name: 'comment[content]', class: 'form-control', style:'border-color: #FF6600;'}
+    = submit_tag 'Submit', class: 'btn btn-warning'
+    %input{type: "hidden", name: 'comment[listing_id]', value: @listing.id}
+
+.col-xs-12
+  - @listing.comments.each do |comment|
+    %br
+    %input{type:'text', value:"#{comment.user.full_name}", class:'btn btn-warning', disabled: true}
+    %textarea{class:'form-control', disabled: true}=comment.content
