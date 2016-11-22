@@ -1,0 +1,23 @@
+= form_for page, multipart:true do |f|
+  - if page.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(listing.errors.count, "error")
+        prohibited this listing from being saved:
+      %ul
+        - listing.errors.full_messages.each do |message|
+          %li= message
+  %select.form-control{:name => "page[category_id]"}
+    - Category.all.each do |cat|
+      %option{value:cat.id}=cat.name
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :content
+    = f.text_area :content
+  .field
+    = f.label :language
+    = f.text_area :language
+  .actions
+    = f.submit

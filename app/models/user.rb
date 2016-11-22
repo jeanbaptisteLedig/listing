@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :listings
   has_many :contacts
 
+  has_many :pages
+  
   def full_name
     "#{first_name} #{last_name}"
   end

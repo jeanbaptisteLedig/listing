@@ -136,3 +136,13 @@ p{
     }
   }
 }
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  color: #FFF;
+  z-index: 100;
+  text-align: center;
+}

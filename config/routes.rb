@@ -9,6 +9,11 @@ Rails.application.routes.draw do
     resources :listings, only: [:index, :show, :new]
     devise_for :users
 
+    namespace :pages do
+      resources :new
+      resources :update
+    end
+
     namespace :account do
       resources :contacts
       resources :users
